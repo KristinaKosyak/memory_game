@@ -6,7 +6,7 @@ import time
 pygame.init()
 
 
-WIDTH, HEIGHT = 600, 600
+WIDTH, HEIGHT = 500, 500
 FPS = 30
 CARD_SIZE = 100
 GRID_SIZE = 4  # Сітка 4x4
@@ -23,7 +23,7 @@ font = pygame.font.Font(None, 50)
 
 # Створення екрану
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Казіно на дурака")
+pygame.display.set_caption("Тест на память як у рибкі")
 clock = pygame.time.Clock()
 
 
@@ -102,12 +102,12 @@ def main():
         # Перевірка завершення гри
         if all(matched):
             game_over = True
-            print(f"Ви виграли за {moves} ходів!")
+            print(f"Ви пройшли гру за {moves} ходів!")
 
         # Оновлення екрану
         pygame.display.flip()
 
-        # Обмежуємо FPS
+        # FPS
         clock.tick(FPS)
 
     pygame.quit()
